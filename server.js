@@ -17,9 +17,9 @@ app.set('views', path.join(__dirname, '/views/'))
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'layoututama', layoutsDir: __dirname + '/views/layouts/' }));
 app.set('view engine', 'hbs')
 
-// app.listen(3000, () => {
-//     console.log('express start pada port : 3000');
-// });
+app.listen(3000, () => {
+    console.log('express start pada port : 3000');
+});
 //pakai controller pegawai
 app.use('/pegawai', pegawaiController)
 
