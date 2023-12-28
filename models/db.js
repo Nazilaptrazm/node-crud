@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://collagejvnx:WOItEdN7X37mB6PL@nodecrud.m2ruwfq.mongodb.net/?retryWrites=true&w=majority', {
+        await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
@@ -14,5 +15,6 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
 
 require('./pegawai.model');
