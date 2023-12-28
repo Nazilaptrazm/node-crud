@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-title">
+        <h3>{{viewTitle}}</h3>
+           <a href="/pegawai" class="btn-sm btn-warning float-right"><i class="fa fa-plus">Tambah Data</i></a>
+    </div>
+    <div class="card-body">
+        <table class=" table table-striped">
+            <thead>
+                <tr>
+                    <td>Id Pegawai</td>
+                    <td>Nama</td>
+                    <td>Agama</td>
+                    <td>Jenis Kelamin</td>
+                    <td>Status</td>
+                    <td>Pendidikan</td>
+                    <td>Jurusan</td>
+                    <td>aksi</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                    <tr>
+                        <td>{{this.id_pegawai}}</td>
+                        <td>{{this.nama}}</td>
+                        <td>{{this.agama}}</td>
+                        <td>{{this.jenis_kelamin}}</td>
+                        <td>{{this.status}}</td>
+                        <td>{{this.pendidikan}}</td>
+                        <td>{{this.jurusan}}</td>
+                        <td>
+                            <a href="/pegawai/{{this._id}}">
+                                <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                            </a>
+                            <a href="/pegawai/delete/{{this.id}}">
+                                <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

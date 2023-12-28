@@ -1,0 +1,13 @@
+langkah - langkah
+npm init
+    set main = server.js
+
+install npm express
+install mongoose
+install body-parser
+install nodemon
+
+setting koneksi
+
+atur base url
+set enggine view

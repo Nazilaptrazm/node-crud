@@ -1,0 +1,44 @@
+<div class="card col-md-8 offset-md-2">
+    <div class="card-title">
+        <h3>{{viewTitle}}</h3>
+     
+    </div>
+    <div class="card-body">
+<form action="/pegawai" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{newPegawai._id}}">
+    <div class="form-group col-md-12">
+        <label for="nama">Kode Pegawai</label>
+        <input type="text" name="id_pegawai" class="form-control" value="{{newPegawai.id_pegawai}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" name="nama" class="form-control" value="{{newPegawai.nama}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Agama</label>
+        <input type="text" name="agama" class="form-control" value="{{newPegawai.agama}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Jenis Kelamin</label>
+        <input type="text" name="jenis_kelamin" class="form-control" value="{{newPegawai.jenis_kelamin}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Status</label>
+        <input type="text" name="status" class="form-control" value="{{newPegawai.status}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Pendidikan</label>
+        <input type="text" name="pendidikan" class="form-control" value="{{newPegawai.pendidikan}}">
+    </div>
+     <div class="form-group col-md-12">
+        <label for="nama">Jurursan</label>
+        <input type="text" name="jurusan" class="form-control" value="{{newPegawai.jurusan}}">
+    </div>
+    <div class="form-group col-md-12">
+        <button class="btn-sm btn-info"><i class="fa fa-database"></i> Simpan</button>
+        <a href="/pegawai/data" class="btn btn-dark"><i class="fa fa-list-alt"> Data Guru</i></a>
+    </div>
+</form>
+</div>
+</div>
+
