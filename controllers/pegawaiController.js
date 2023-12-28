@@ -22,18 +22,16 @@ router.post('/', (req, res) => {
 });
 
 // tampil data
-router.get('/data', (req, res) => {
-    // res.json('jgbhjghg')
-    Pegawais.find((err, docs) => {
-        if (!err) {
-            res.render('pegawai/data', {
-                list: docs,
-                viewTitle: 'Data Pegawai',
-            });
-        } else {
-            console.log(err);
-        }
-    });
+router.get('/data', async (req, res) => {
+    try {
+        const docs = await Pegawais.find().exec();
+        res.render('pegawai/data', {
+            list: docs,
+            viewTitle: 'Data Pegawai',
+        });
+    } catch (err) {
+        console.log(err);
+    }
 });
 
 // router edit
