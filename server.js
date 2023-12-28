@@ -1,4 +1,4 @@
-require('./models/db')
+const connectDb = require('./models/db')
 const express = require('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
@@ -9,6 +9,8 @@ var app = express()
 app.use(bodyparser.urlencoded({
     extended: true
 }))
+
+connectDb();
 
 app.use(bodyparser.json())
 //set base_url
